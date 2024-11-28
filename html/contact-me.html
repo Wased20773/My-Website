@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="container" class="page-background">
-      <div id="divider-to-contents">
+      <div id="divider-to-nav">
         <nav class="nav-container"></nav>
       </div>
 
@@ -18,12 +18,24 @@
 
         <div class="input-container">
           <div>
-            <label class="input-spacing" for="name">Name</label>
-            <input class="input-spacing" type="text" id="name" name="name" />
+            <label for="name">Name</label>
+            <input
+              class="input-spacing input-style"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+            />
           </div>
           <div>
-            <label class="input-spacing" for="email">Email</label>
-            <input class="input-spacing" type="text" id="email" name="email" />
+            <label for="email">Email</label>
+            <input
+              class="input-spacing input-style"
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email Adress"
+            />
           </div>
         </div>
 
@@ -32,8 +44,10 @@
             class="textarea"
             name="message"
             id="message"
-            cols="70"
-            rows="10"></textarea>
+            cols="100"
+            rows="10"
+            placeholder="Ask me your question"
+          ></textarea>
         </div>
 
         <div class="form-button-container">
@@ -41,8 +55,10 @@
           <input class="form-button" type="reset" value="reset" />
         </div>
       </form>
+      <div id="divider-to-footer"></div>
     </div>
     <!-- Below here goes to the bottom of the page (meant for footer only) -->
+
     <footer id="footer"></footer>
   </body>
 </html>
