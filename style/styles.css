@@ -19,11 +19,16 @@ body {
 
 /* Color Theme */
 :root {
-  --Gunmetal: #0a2e36;
-  --Aqua-Green: #006060;
-  --Office-Green: #036d19;
-  --Emerald: #14cc60;
-  --Spring-Green: #27fb6b;
+  --Gunmetal: rgb(10, 46, 54);
+  --Caribbean-Current: rgb(0, 96, 96);
+  --Dark-Cyan: rgb(0, 143, 143);
+  --Light-Blue: rgb(174, 213, 208);
+  --Shamrock-Green: rgb(21, 149, 92);
+  --Emerald: rgb(20, 204, 96);
+  --Office-Green: rgb(3, 109, 25);
+  --Cat-Poly-Green: rgb(38, 76, 48);
+  --Vanilla: rgb(215, 212, 153);
+  --Davys-Gray: rgb(87, 81, 89);
 }
 
 .page-background {
@@ -33,26 +38,26 @@ body {
 }
 
 .box-container-transparent-round {
-  background-color: rgba(9, 161, 41, 0.65);
+  background-color: rgba(0, 143, 143, 0.85);
   padding: 30px;
   margin: 20px;
-  border: 1px solid var(--Aqua-Green);
+  border: 1px solid var(--Caribbean-Current);
   border-radius: 1cm;
 }
 
 .box-container-transparent-normal {
-  background-color: rgba(9, 161, 41, 0.65);
+  background-color: rgba(0, 143, 143, 0.85);
   padding: 30px;
   margin: 20px;
-  border: 1px solid var(--Aqua-Green);
+  border: 1px solid var(--Caribbean-Current);
   border-radius: 0.5cm;
 }
 
 .box-container-transparent-sharp {
-  background-color: rgba(9, 161, 41, 0.65);
+  background-color: rgba(0, 143, 143, 0.9);
   padding: 30px;
   margin: 20px;
-  border: 1px solid var(--Aqua-Green);
+  border: 1px solid var(--Caribbean-Current);
   border-radius: 0.25cm;
 }
 
@@ -69,7 +74,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--Aqua-Green);
+  background-color: var(--Caribbean-Current);
 }
 
 .nav-list {
@@ -88,8 +93,7 @@ body {
 .nav-link {
   display: block;
   width: 100%;
-  padding: 1em;
-  margin: 15px 0;
+  padding: 0.5em;
   text-decoration: none;
   color: white;
   text-align: center;
@@ -138,7 +142,7 @@ body {
 
 /* ------------------------ */
 
-/* for profile picture */
+/* for About Me page */
 
 .section-about-container {
   display: flex;
@@ -147,7 +151,7 @@ body {
 }
 
 .profile-picture {
-  border: 10px dotted var(--Office-Green);
+  border: 10px dotted var(--Cat-Poly-Green);
   border-radius: 100%;
   padding: 10px;
   margin-left: 50px;
@@ -170,13 +174,72 @@ body {
   border-bottom: 2px solid rgb(17, 17, 17);
   width: 350px;
   font-size: 47px;
+  color: var(--Vanilla);
 }
 
 .about-me {
   font-size: 25px;
 }
 
-/* For the Contact me Form */
+/* For Previous Work */
+
+.resume-info-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 500px;
+}
+
+/* .resume-info {
+  
+} */
+
+#ordered-list-modified {
+  list-style-position: inside;
+}
+
+/* For Projects page */
+
+.project-container {
+  display: grid;
+  /* justify-items: left; */
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  margin: 0 auto 20px;
+  padding: 20px;
+  border: 2px solid var(--Caribbean-Current);
+  background-color: var(--Dark-Cyan);
+  max-width: 800px;
+  min-width: 800px;
+}
+
+.project-header1-left {
+  margin-left: 15px;
+  grid-column: span 2;
+  align-content: center;
+  color: var(--Vanilla);
+}
+
+.article-spacing-left {
+  margin: 15px 7px 7px 30px;
+}
+
+.project-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  background-color: var(--Light-Blue);
+  padding: 10px;
+}
+
+.pixelated-cover-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+/* For the Contact Me Form */
 
 .form {
   min-width: 700px;
@@ -191,6 +254,7 @@ body {
   text-align: center;
   padding-bottom: 30px;
   font-size: 45px;
+  color: var(--Vanilla);
 }
 
 .input-container {
@@ -198,6 +262,7 @@ body {
   justify-content: space-between;
   padding-bottom: 30px;
   font-size: 15px;
+  color: white;
 }
 
 .input-spacing {
@@ -208,21 +273,25 @@ body {
 .input-style {
   border: 1px solid var(--Office-Green);
   border-radius: 0.15cm;
-  background-color: var(--Spring-Green);
+  background-color: var(--Light-Blue);
   font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .textarea-container {
   display: flex;
-
   font-size: 15px;
+  width: 100%;
 }
 
 .textarea {
+  width: 100%;
   padding: 10px;
   resize: vertical;
   border: 1px solid var(--Office-Green);
-  background-color: var(--Spring-Green);
+  background-color: var(--Light-Blue);
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .form-button-container {
@@ -231,17 +300,21 @@ body {
   justify-content: space-evenly;
   margin-top: 10px;
 }
+
 .form-button {
-  border: 5px solid var(--Office-Green);
+  border: 5px solid var(--Caribbean-Current);
   border-radius: 0.25cm;
-  background-color: var(--Spring-Green);
+  background-color: var(--Caribbean-Current);
   width: 125px;
   height: 40px;
-  transition: 0.25s;
-}
-.form-button:hover {
-  border: 5px solid var(--Gunmetal);
-  background-color: var(--Office-Green);
   color: white;
+  transition: 0.25s;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.form-button:hover {
+  border: 7px solid var(--Gunmetal);
+  color: var(--Vanilla);
   transition: 0.25s;
 }
