@@ -8,53 +8,60 @@
     <title>Contact Me</title>
   </head>
   <body>
-    <div id="container" class="page-background">
-      <div id="divider-to-nav">
+    <div class="main-container">
+      <div class="divider-to-nav">
         <nav class="nav-container"></nav>
       </div>
 
-      <form class="box-container-transparent-sharp form">
-        <h1 class="header1-contact-me">Want to contact me?</h1>
+      <div class="mobile-spacing">
+        <form class="box-container-transparent-sharp form">
+          <h1 class="header1-contact-me">Want to contact me?</h1>
 
-        <div class="input-container">
-          <div>
-            <label for="name">Name</label>
-            <input
-              class="input-spacing input-style"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Full Name" />
+          <div class="input-container">
+            <div class="input-group">
+              <label for="name">Name</label>
+
+              <input
+                class="input-spacing input-style"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full Name"
+              />
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+
+              <input
+                class="input-spacing input-style"
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+              />
+            </div>
           </div>
-          <div>
-            <label for="email">Email</label>
-            <input
-              class="input-spacing input-style"
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Email Address" />
+
+          <label for="message">What do you want to ask me</label>
+          <div class="textarea-container">
+            <textarea
+              class="textarea"
+              name="message"
+              id="message"
+              rows="10"
+            ></textarea>
           </div>
-        </div>
 
-        <label for="message">What do you want to ask me</label>
-        <div class="textarea-container">
-          <textarea
-            class="textarea"
-            name="message"
-            id="message"
-            rows="10"></textarea>
-        </div>
-
-        <div class="form-button-container">
-          <input class="form-button" type="submit" value="submit" />
-          <input class="form-button" type="reset" value="reset" />
-        </div>
-      </form>
-      <div id="divider-to-footer"></div>
+          <div class="form-button-container">
+            <input class="form-button" type="submit" value="submit" />
+            <input class="form-button" type="reset" value="reset" />
+          </div>
+        </form>
+      </div>
+      <div class="divider-to-footer"></div>
     </div>
     <!-- Below here goes to the bottom of the page (meant for footer only) -->
 
-    <footer id="footer"></footer>
+    <footer class="footer"></footer>
   </body>
 </html>
