@@ -69,21 +69,7 @@ const createNavigation = () => {
   exitLink.addEventListener("click", exitSidebar);
 
   /* add the attributes for the svgExit */
-  mySvgExit.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  mySvgExit.setAttribute("height", "40px");
-  mySvgExit.setAttribute("viewBox", "0 -960 960 960");
-  mySvgExit.setAttribute("width", "40px");
-  mySvgExit.setAttribute("fill", "#e8eaed");
-
-  pathExit.setAttribute(
-    "d",
-    "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-  );
-
-  mySvgExit.appendChild(pathExit);
-
-  exitLink.appendChild(mySvgExit);
-  exitList.appendChild(exitLink);
+  createSvgExitButton(mySvgExit, pathExit, exitLink, exitList);
 
   /* -------------- */
 
@@ -135,23 +121,12 @@ const createNavigation = () => {
   hamburgerButtonList.addEventListener("click", showSidebar);
 
   /* add the attributes for the svgSide */
-  mySvgSide.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  mySvgSide.setAttribute("height", "40px");
-  mySvgSide.setAttribute("viewBox", "0 -960 960 960");
-  mySvgSide.setAttribute("width", "40px");
-  mySvgSide.setAttribute("fill", "#e8eaed");
-
-  pathSide.setAttribute(
-    "d",
-    "M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+  createSvgBurgerButton(
+    mySvgSide,
+    pathSide,
+    hamburgerButtonLink,
+    hamburgerButtonList
   );
-
-  mySvgSide.appendChild(pathSide);
-
-  hamburgerButtonLink.appendChild(mySvgSide);
-  hamburgerButtonList.appendChild(hamburgerButtonLink);
-
-  /* -------------- */
 
   listOne.appendChild(linkOne);
   listTwo.appendChild(linkTwo);
@@ -167,6 +142,55 @@ const createNavigation = () => {
   myNav.appendChild(unOrderedList);
 
   return myNav;
+};
+
+const createSvgExitButton = (mySvgExit, pathExit, exitLink, exitList) => {
+  // Set SVG attributes
+  mySvgExit.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  mySvgExit.setAttribute("height", "40px");
+  mySvgExit.setAttribute("viewBox", "0 -960 960 960");
+  mySvgExit.setAttribute("width", "40px");
+  mySvgExit.setAttribute("fill", "#e8eaed");
+
+  // Set Path attributes
+  pathExit.setAttribute(
+    "d",
+    "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+  );
+
+  // Append Path to SVG
+  mySvgExit.appendChild(pathExit);
+
+  // Append SVG to the provided elements
+  exitLink.appendChild(mySvgExit);
+  exitList.appendChild(exitLink);
+};
+
+const createSvgBurgerButton = (
+  mySvgSide,
+  pathSide,
+  hamburgerButtonLink,
+  hamburgerButtonList
+) => {
+  // Set SVG attributes
+  mySvgSide.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  mySvgSide.setAttribute("height", "40px");
+  mySvgSide.setAttribute("viewBox", "0 -960 960 960");
+  mySvgSide.setAttribute("width", "40px");
+  mySvgSide.setAttribute("fill", "#e8eaed");
+
+  // Set Path attributes
+  pathSide.setAttribute(
+    "d",
+    "M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+  );
+
+  // Append Path to SVG
+  mySvgSide.appendChild(pathSide);
+
+  // Append SVG to the provided elements
+  hamburgerButtonLink.appendChild(mySvgSide);
+  hamburgerButtonList.appendChild(hamburgerButtonLink);
 };
 
 const createFooter = () => {
