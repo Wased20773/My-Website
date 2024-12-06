@@ -43,7 +43,7 @@ const createNavigation = () => {
   linkFourSide.textContent = "Contact Me";
 
   // add hrefs
-  linkOneSide.href = "../html/index.html";
+  linkOneSide.href = "../index.html";
   linkTwoSide.href = "../html/previous-work.html";
   linkThreeSide.href = "../html/projects.html";
   linkFourSide.href = "../html/contact-me.html";
@@ -96,7 +96,7 @@ const createNavigation = () => {
   linkFour.textContent = "Contact Me";
 
   // add hrefs
-  linkOne.href = "../html/index.html";
+  linkOne.href = "../index.html";
   linkTwo.href = "../html/previous-work.html";
   linkThree.href = "../html/projects.html";
   linkFour.href = "../html/contact-me.html";
