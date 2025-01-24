@@ -194,7 +194,7 @@ const createSvgBurgerButton = (
 };
 
 const createFooter = () => {
-  footer.textContent = "Copyright Ⓒ 2024 Bryan Vazquez. All rights reserved.";
+  footer.textContent = "Copyright Ⓒ 2025 Bryan Vazquez. All rights reserved.";
 };
 
 function showSidebar() {

@@ -208,6 +208,11 @@ body {
   border-bottom: 2px solid black;
 }
 
+.light-text {
+  color: var(--Light-Blue);
+  padding-bottom: 10px;
+}
+
 .resume-info-container {
   margin: 0 auto;
   max-width: 600px;
