@@ -220,14 +220,24 @@ body {
 }
 
 .ordered-list-modified {
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
 
-  margin: 0 0 20px 35px;
+.ordered-list-modified ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.list-heading {
+  font-weight: bold;
 }
 
 /* For Projects page */
 
-.game-card {
+.project-card {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 3fr;
@@ -237,6 +247,11 @@ body {
   background-color: rgba(0, 143, 143, 0.85);
   max-width: 800px;
   min-width: 800px;
+}
+
+.project-card-unavailable {
+  border: 2px solid var(--Caribbean-Current);
+  background-color: rgba(167, 167, 167, 0.85);
 }
 
 .project-header {
@@ -251,7 +266,7 @@ body {
   margin: 15px 7px 7px 30px;
 }
 
-.game-container {
+.project-container {
   border-bottom: 5px solid rgb(0, 96, 96);
   background-color: var(--Light-Blue);
   border-radius: 1cm;
@@ -260,13 +275,33 @@ body {
   grid-template-rows: 4fr 2fr;
   align-items: center;
   justify-items: center;
+
+  padding: 0 20px;
+}
+
+.project-container-unavailable {
+  background-image: url("./images/Projects/unavailable.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.center-project-button-link {
+  border-bottom: 5px solid rgb(0, 96, 96);
+  background-color: var(--Light-Blue);
+  border-radius: 1cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 20px;
 }
 
 .project-image {
   padding: 10px;
 }
 
-.game-button-link {
+.project-button-link {
   border: 1px solid rgb(0, 96, 96);
   border-radius: 0.35cm;
   background-color: var(--Shamrock-Green);
@@ -276,9 +311,15 @@ body {
   text-decoration: none;
   color: black;
   transition: 0.3s;
+  width: 200px;
 }
 
-.game-button-link:hover {
+.project-container-unavailable > div > a {
+  background-color: rgb(211, 211, 211);
+  border: 1px solid rgb(146, 146, 146);
+}
+
+.project-button-link:hover:not(.project-container-unavailable > div > a) {
   background-color: var(--Office-Green);
   transition: 0.3s;
 }
@@ -446,7 +487,7 @@ body {
 
   /* For Projects */
 
-  .game-card {
+  .project-card {
     grid-template-rows: 0.85fr 4fr;
     min-width: 300px;
   }
@@ -459,8 +500,17 @@ body {
     margin: 15px 7px 7px 30px;
   }
 
-  .game-container {
+  .project-container {
     grid-template-rows: 3fr 2fr;
+    height: 200px;
+    margin: auto 0;
+  }
+
+  .move-button-to-bottom {
+    height: 150px;
+    display: flex;
+    align-content: end;
+    margin: auto 0 0 0;
   }
 
   .project-image {
@@ -468,12 +518,12 @@ body {
     height: 120px;
   }
 
-  .game-button-link {
+  .project-button-link {
     padding: 13px 24px;
     transition: none;
   }
 
-  .game-button-link:hover {
+  .project-button-link:hover {
     transition: none;
   }
 
@@ -574,8 +624,6 @@ body {
     margin-bottom: 16px;
   }
 
-  /* For Previous Work */
-
   .resume-info-container {
     min-width: 300px;
   }
@@ -588,10 +636,14 @@ body {
 
   /* For Projects */
 
-  .game-card {
+  .project-card {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr 4fr;
     min-width: 300px;
+  }
+
+  .mobile-grid-spacing-for-button-links {
+    grid-template-rows: 1fr 4fr 2fr;
   }
 
   .project-header {
@@ -612,14 +664,21 @@ body {
     height: 200px;
   }
 
-  .game-button-link {
+  .project-button-link {
     padding: 20px 60px;
     margin: 0 10px;
     transition: none;
   }
 
-  .game-button-link:hover {
+  .project-button-link:hover {
     transition: none;
+  }
+
+  .center-project-button-link {
+    height: 200px;
+  }
+  .move-button-to-bottom {
+    margin: auto 0 0 0;
   }
 
   /* For Contact Me  */
